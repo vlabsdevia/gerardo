@@ -1,0 +1,103 @@
+@page {
+  size: 3.75in 2.25in;
+  margin: 0;
+}
+
+html, body {
+  width: 3.75in;
+  background: #888;
+}
+
+.print-sheet {
+  width: 3.75in;
+  height: 2.25in;
+  position: relative;
+  page-break-after: always;
+  break-after: page;
+  background: var(--card);
+  overflow: hidden;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+.print-sheet:last-child { page-break-after: auto; break-after: auto; }
+
+.print-sheet .card-face {
+  position: absolute;
+  inset: 0.125in;
+  width: 3.5in;
+  height: 2in;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+/* ----------------------------------------------------------------
+   Bleed extension — extends each card-face background into the 0.125"
+   bleed area so trim mis-registration at the printer doesn't expose
+   white edges. Applied to .print-sheet (the full 3.75x2.25 page)
+   based on which face it contains. For Option B's diagonal, the same
+   gradient is repeated on the print-sheet; any sub-mm seam offset
+   inside the bleed gets cut off at trim.
+   ---------------------------------------------------------------- */
+.print-sheet:has(.a-front) { background: var(--ink); }
+.print-sheet:has(.a-back),
+.print-sheet:has(.c-front),
+.print-sheet:has(.c-back)  { background: var(--cream); }
+.print-sheet:has(.b-front) {
+  background: linear-gradient(118deg, var(--ink) 0%, var(--ink) 47%, var(--cream) 47%, var(--cream) 100%);
+}
+.print-sheet:has(.b-back) {
+  background: linear-gradient(118deg, var(--cream) 0%, var(--cream) 53%, var(--ink) 53%, var(--ink) 100%);
+}
+
+.crop-marks::before,
+.crop-marks::after {
+  content: "";
+  position: absolute;
+  background: #999;
+}
+
+@media screen {
+  body {
+    background: #2a2f36;
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .print-sheet {
+    box-shadow: 0 18px 48px rgba(0,0,0,0.45);
+    outline: 1px dashed rgba(255,255,255,0.25);
+    outline-offset: 0;
+  }
+  .print-sheet .card-face {
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+  }
+  .label {
+    color: #cbd5e1;
+    font-family: var(--font-body, sans-serif);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .print-instructions {
+    max-width: 3.75in;
+    color: #cbd5e1;
+    font-family: var(--font-body, sans-serif);
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: 8px;
+  }
+  .print-instructions code {
+    background: rgba(255,255,255,0.08);
+    padding: 1px 6px;
+    border-radius: 3px;
+    color: #fff;
+  }
+}
+
+@media print {
+  body { background: #fff; padding: 0; }
+  .label, .print-instructions { display: none; }
+  .print-sheet { box-shadow: none; outline: none; }
+}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gerardo Pressure Washing</title>
+<link rel="stylesheet" href="../shared/fonts.css">
+<link rel="stylesheet" href="../shared/tokens.css">
+<link rel="stylesheet" href="../shared/flip.css">
+<link rel="stylesheet" href="card.css">
+</head>
+<body>
+
+<div class="stage">
+  <div class="stage-inner">
+    <span class="flip-hint">Tap or hover to flip · Scan to call or visit</span>
+
+    <button class="flip-card" type="button" aria-pressed="false" aria-label="Business card. Tap to flip.">
+      <div class="flip-card-inner">
+
+        <div class="flip-face front g-front">
+          <img class="logo" src="../shared/img/logo-white.svg" alt="Gerardo Pressure Washing">
+          <div class="name-block">
+            <h1 class="name">Gerardo <span class="last">[Last]</span></h1>
+            <div class="rule"></div>
+            <p class="role">Owner &amp; Operator</p>
+          </div>
+          <p class="phone">(904) 555-0100</p>
+          <p class="city">Jacksonville, FL</p>
+          <div class="qr-block">
+            <a class="qr-tile" href="tel:+19045550100" aria-label="Call Gerardo">
+              <img src="../shared/qr/tel-navy.svg" alt="">
+            </a>
+            <p class="qr-label">Call Gerardo</p>
+          </div>
+        </div>
+
+        <div class="flip-face back g-back">
+          <h2 class="headline">Pressure washing.<br><em>Crystal clear.</em></h2>
+          <p class="services">Driveways · Sidings · Decks · Roofs</p>
+          <a class="qr-tile" href="https://gerardopressurewash.com" target="_blank" rel="noopener" aria-label="Visit gerardopressurewash.com">
+            <img src="../shared/qr/web-blue.svg" alt="">
+          </a>
+          <div class="info">
+            <p class="url">gerardopressurewash.com</p>
+            <p class="email">gerardo@gerardopressurewash.com</p>
+            <hr>
+            <p class="tagline">Free estimates · Licensed &amp; insured</p>
+          </div>
+          <p class="legal">Jacksonville, FL · Northeast Florida</p>
+        </div>
+
+      </div>
+    </button>
+  </div>
+</div>
+
+<script>
+  const card = document.querySelector('.flip-card');
+  card.addEventListener('click', (e) => {
+    if (e.target.closest('.qr-tile')) return;
+    card.setAttribute('aria-pressed', card.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+  });
+</script>
+
+</body>
+</html>

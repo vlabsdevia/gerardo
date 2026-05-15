@@ -1,0 +1,215 @@
+/* Gerardo Pressure Washing — Navy front + cream back, water-blue accent */
+
+.g-front {
+  background: var(--ink);
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr auto;
+  padding: 0.18in 0.18in;
+  gap: 0;
+  position: relative;
+}
+
+.g-front .logo {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  align-self: start;
+  width: 1.35in;
+  height: auto;
+  margin-top: -0.02in;
+  margin-left: -0.03in;
+}
+
+.g-front .name-block {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  align-self: end;
+}
+.g-front .name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 22pt;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: #fff;
+}
+.g-front .name .last { color: #fff; }
+.g-front .rule {
+  width: 0.4in;
+  height: 2px;
+  background: var(--accent);
+  margin: 0.07in 0 0.05in;
+  border-radius: 1px;
+}
+.g-front .role {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 7.5pt;
+  letter-spacing: 0.04em;
+  color: var(--accent-light);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.g-front .phone {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 10pt;
+  letter-spacing: 0.01em;
+  color: #fff;
+  margin: 0.08in 0 0;
+  display: block;
+}
+.g-front .city {
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 7pt;
+  letter-spacing: 0.04em;
+  color: var(--accent-light);
+  margin: 0.02in 0 0;
+}
+
+.g-front .qr-block {
+  grid-column: 2 / 3;
+  grid-row: 1 / 4;
+  align-self: center;
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.05in;
+}
+.g-front .qr-tile {
+  width: 0.95in;
+  height: 0.95in;
+  background: #fff;
+  border-radius: 4px;
+  padding: 0.06in;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.g-front .qr-tile img,
+.g-front .qr-tile svg { width: 100%; height: 100%; display: block; }
+.g-front .qr-label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 5.5pt;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+}
+
+/* --- Back --- */
+.g-back {
+  background: var(--cream);
+  color: var(--ink);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr auto;
+  padding: 0.18in;
+  gap: 0;
+  position: relative;
+}
+.g-back .headline {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 13.5pt;
+  line-height: 1.05;
+  margin: 0;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+.g-back .headline em {
+  font-style: normal;
+  color: var(--accent-2);
+}
+
+.g-back .services {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  align-self: start;
+  margin-top: 0.42in;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 7pt;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+}
+
+.g-back .qr-tile {
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+  align-self: end;
+  width: 0.95in;
+  height: 0.95in;
+  background: #fff;
+  border-radius: 4px;
+  padding: 0.05in;
+  box-shadow: 0 0 0 1px rgba(0,29,61,0.06);
+  margin-top: 0.08in;
+}
+.g-back .qr-tile img,
+.g-back .qr-tile svg { width: 100%; height: 100%; display: block; }
+
+.g-back .info {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  align-self: end;
+  padding-left: 0.14in;
+  display: flex;
+  flex-direction: column;
+  gap: 0.04in;
+}
+.g-back .url {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 9.5pt;
+  color: var(--ink);
+  margin: 0;
+}
+.g-back .email {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 7pt;
+  color: var(--ink-2);
+  margin: 0;
+  word-break: break-all;
+}
+.g-back .info hr {
+  width: 0.32in;
+  border: 0;
+  border-top: 1.5px solid var(--accent);
+  margin: 0.04in 0;
+}
+.g-back .tagline {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-style: italic;
+  font-size: 7pt;
+  color: var(--accent-2);
+  margin: 0;
+}
+
+.g-back .legal {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  align-self: end;
+  text-align: right;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 5.5pt;
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+  text-transform: uppercase;
+  margin: 0;
+}

@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gerardo Pressure Washing — Business Card</title>
+<link rel="stylesheet" href="shared/fonts.css">
+<link rel="stylesheet" href="shared/tokens.css">
+<link rel="stylesheet" href="card/card.css">
+<style>
+  body {
+    background: #0d1117;
+    color: #e2e8f0;
+    font-family: var(--font-body);
+    padding: 56px 24px 80px;
+    margin: 0;
+  }
+  .page { max-width: 720px; margin: 0 auto; }
+  header {
+    margin-bottom: 48px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 28px;
+    text-align: center;
+  }
+  .eyebrow {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    margin: 0 0 14px;
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 36px;
+    letter-spacing: -0.02em;
+    margin: 0 0 10px;
+    color: #fff;
+    line-height: 1.05;
+  }
+  .lede {
+    font-size: 15px;
+    line-height: 1.55;
+    color: rgba(226,232,240,0.75);
+    max-width: 56ch;
+    margin: 0 auto;
+  }
+  .card-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+  .face-label {
+    font-size: 9.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(226,232,240,0.42);
+    margin-top: 6px;
+  }
+  .face-wrap {
+    width: var(--card-w);
+    height: var(--card-h);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow:
+      0 22px 44px rgba(0,0,0,0.55),
+      0 6px 14px rgba(0,0,0,0.35);
+  }
+  .face-wrap > .card-face { width: 100%; height: 100%; }
+  .links {
+    display: flex; flex-wrap: wrap; gap: 14px;
+    font-size: 13px; justify-content: center; margin-top: 24px;
+  }
+  .links a {
+    color: var(--accent-light);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(125,211,252,0.4);
+    padding-bottom: 1px;
+    font-weight: 600;
+  }
+  .links a:hover { color: #fff; border-color: #fff; }
+
+  .placeholders-banner {
+    background: rgba(217, 164, 65, 0.12);
+    border: 1px dashed rgba(217, 164, 65, 0.5);
+    color: #f4d27a;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 32px;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  .placeholders-banner strong { color: #fff5d4; }
+
+  footer {
+    margin-top: 64px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    font-size: 12.5px;
+    line-height: 1.65;
+    color: rgba(226,232,240,0.55);
+    max-width: 65ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer code {
+    background: rgba(255,255,255,0.08);
+    padding: 1px 6px;
+    border-radius: 3px;
+    color: #fff;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  footer strong { color: #fff; }
+
+  @media (max-width: 800px) {
+    body { padding: 32px 16px 60px; }
+    h1 { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <header>
+    <p class="eyebrow">Gerardo · Pressure Washing</p>
+    <h1>Business card</h1>
+    <p class="lede">Navy front with a "Call Gerardo" QR, cream back with website QR. Same template as the SDC cards, retuned for the pressure-wash brand (water-blue accent, spray-nozzle wordmark). 3.5″ × 2″ trim with 0.125″ bleed.</p>
+  </header>
+
+  <div class="placeholders-banner">
+    <strong>⚠ PLACEHOLDERS</strong> — fill in real values before printing:<br>
+    last name (<code>[Last]</code>), phone (<code>(904) 555-0100</code>), website (<code>gerardopressurewash.com</code>), email.<br>
+    After editing <code>card/print.html</code> and <code>card/web.html</code>, also update <code>scripts/build-qr.sh</code> (the <code>PHONE</code> + <code>WEB</code> variables), then run <code>./scripts/build-qr.sh</code> followed by <code>./scripts/build-print.sh</code> to regenerate the QRs and PDF.
+  </div>
+
+  <div class="card-stack">
+
+    <span class="face-label">Front</span>
+    <div class="face-wrap">
+      <div class="card-face g-front">
+        <img class="logo" src="shared/img/logo-white.svg" alt="Gerardo Pressure Washing">
+        <div class="name-block">
+          <h3 class="name">Gerardo <span class="last">[Last]</span></h3>
+          <div class="rule"></div>
+          <p class="role">Owner &amp; Operator</p>
+        </div>
+        <p class="phone">(904) 555-0100</p>
+        <p class="city">Jacksonville, FL</p>
+        <div class="qr-block">
+          <div class="qr-tile"><img src="shared/qr/tel-navy.svg" alt=""></div>
+          <p class="qr-label">Call Gerardo</p>
+        </div>
+      </div>
+    </div>
+
+    <span class="face-label">Back</span>
+    <div class="face-wrap">
+      <div class="card-face g-back">
+        <h3 class="headline">Pressure washing.<br><em>Crystal clear.</em></h3>
+        <p class="services">Driveways · Sidings · Decks · Roofs</p>
+        <div class="qr-tile"><img src="shared/qr/web-blue.svg" alt=""></div>
+        <div class="info">
+          <p class="url">gerardopressurewash.com</p>
+          <p class="email">gerardo@gerardopressurewash.com</p>
+          <hr>
+          <p class="tagline">Free estimates · Licensed &amp; insured</p>
+        </div>
+        <p class="legal">Jacksonville, FL · Northeast Florida</p>
+      </div>
+    </div>
+
+    <div class="links">
+      <a href="card/web.html">Interactive flip ↗</a>
+      <a href="card/print.html">Print sheet ↗</a>
+      <a href="dist/gerardo-card.pdf">Print-ready PDF ↗</a>
+    </div>
+  </div>
+
+  <footer>
+    <strong>Print-ready PDF:</strong> <code>dist/gerardo-card.pdf</code> — 2 pages (front, back), 3.75″ × 2.25″ (trim 3.5″ × 2″ + 0.125″ bleed all sides), embedded fonts, sRGB. Upload directly to Vistaprint, Moo, GotPrint, 4Over, or any local printer. See <code>dist/README.md</code> for upload steps.
+    <br><br>
+    <strong>Brand differences from SDC:</strong> accent color is sky blue (<code>#0EA5E9</code>) instead of green; logo is a custom wordmark with spray-nozzle icon instead of the SDC mark; tagline is "Pressure washing. Crystal clear." instead of "Foodservice packaging. Jacksonville built."
+    <br><br>
+    <strong>This project lives outside <code>production/</code></strong> (the SDC website folder) — at <code>JoseFinal/gerardo/</code>. Nothing here references or modifies SDC assets. Hostable independently as a static site.
+  </footer>
+</div>
+
+</body>
+</html>
