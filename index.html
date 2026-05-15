@@ -1,193 +1,277 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gerardo Pressure Washing — Business Card</title>
-<link rel="stylesheet" href="shared/fonts.css">
-<link rel="stylesheet" href="shared/tokens.css">
-<link rel="stylesheet" href="card/card.css">
-<style>
-  body {
-    background: #0d1117;
-    color: #e2e8f0;
-    font-family: var(--font-body);
-    padding: 56px 24px 80px;
-    margin: 0;
-  }
-  .page { max-width: 720px; margin: 0 auto; }
-  header {
-    margin-bottom: 48px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    padding-bottom: 28px;
-    text-align: center;
-  }
-  .eyebrow {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 11px;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: var(--accent-light);
-    margin: 0 0 14px;
-  }
-  h1 {
-    font-family: var(--font-display);
-    font-weight: 800;
-    font-size: 36px;
-    letter-spacing: -0.02em;
-    margin: 0 0 10px;
-    color: #fff;
-    line-height: 1.05;
-  }
-  .lede {
-    font-size: 15px;
-    line-height: 1.55;
-    color: rgba(226,232,240,0.75);
-    max-width: 56ch;
-    margin: 0 auto;
-  }
-  .card-stack {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 28px;
-  }
-  .face-label {
-    font-size: 9.5px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: rgba(226,232,240,0.42);
-    margin-top: 6px;
-  }
-  .face-wrap {
-    width: var(--card-w);
-    height: var(--card-h);
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow:
-      0 22px 44px rgba(0,0,0,0.55),
-      0 6px 14px rgba(0,0,0,0.35);
-  }
-  .face-wrap > .card-face { width: 100%; height: 100%; }
-  .links {
-    display: flex; flex-wrap: wrap; gap: 14px;
-    font-size: 13px; justify-content: center; margin-top: 24px;
-  }
-  .links a {
-    color: var(--accent-light);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(125,211,252,0.4);
-    padding-bottom: 1px;
-    font-weight: 600;
-  }
-  .links a:hover { color: #fff; border-color: #fff; }
-
-  .placeholders-banner {
-    background: rgba(217, 164, 65, 0.12);
-    border: 1px dashed rgba(217, 164, 65, 0.5);
-    color: #f4d27a;
-    padding: 12px 16px;
-    border-radius: 6px;
-    font-size: 12px;
-    line-height: 1.5;
-    margin-bottom: 32px;
-    font-family: ui-monospace, "SF Mono", Menlo, monospace;
-  }
-  .placeholders-banner strong { color: #fff5d4; }
-
-  footer {
-    margin-top: 64px;
-    padding-top: 28px;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    font-size: 12.5px;
-    line-height: 1.65;
-    color: rgba(226,232,240,0.55);
-    max-width: 65ch;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  footer code {
-    background: rgba(255,255,255,0.08);
-    padding: 1px 6px;
-    border-radius: 3px;
-    color: #fff;
-    font-family: ui-monospace, "SF Mono", Menlo, monospace;
-  }
-  footer strong { color: #fff; }
-
-  @media (max-width: 800px) {
-    body { padding: 32px 16px 60px; }
-    h1 { font-size: 28px; }
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gerardo Pressure Washing — Jacksonville, FL</title>
+  <meta name="description" content="Residential and commercial pressure washing across Jacksonville and Northeast Florida. Soft wash and power wash, free estimates, licensed and insured.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="page">
-  <header>
-    <p class="eyebrow">Gerardo · Pressure Washing</p>
-    <h1>Business card</h1>
-    <p class="lede">Navy front with a "Call Gerardo" QR, cream back with website QR. Same template as the SDC cards, retuned for the pressure-wash brand (water-blue accent, spray-nozzle wordmark). 3.5″ × 2″ trim with 0.125″ bleed.</p>
-  </header>
-
-  <div class="placeholders-banner">
-    <strong>⚠ PLACEHOLDERS</strong> — fill in real values before printing:<br>
-    last name (<code>[Last]</code>), phone (<code>(904) 555-0100</code>), website (<code>gerardopressurewash.com</code>), email.<br>
-    After editing <code>card/print.html</code> and <code>card/web.html</code>, also update <code>scripts/build-qr.sh</code> (the <code>PHONE</code> + <code>WEB</code> variables), then run <code>./scripts/build-qr.sh</code> followed by <code>./scripts/build-print.sh</code> to regenerate the QRs and PDF.
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<nav class="site-nav" aria-label="Site navigation">
+  <a href="index.html" class="site-brand" style="text-decoration:none;color:inherit">
+    <img src="shared/img/logo-white.svg" alt="Gerardo Pressure Washing" class="site-brand-img" style="height:36px;width:auto">
+  </a>
+  <div class="site-links">
+    <a href="index.html"    class="site-link active" data-i="nav_home">Home</a>
+    <a href="services.html" class="site-link"        data-i="nav_services">Services</a>
+    <a href="about.html"    class="site-link"        data-i="nav_about">About</a>
+    <a href="contact.html"  class="site-link"        data-i="nav_contact">Contact</a>
   </div>
-
-  <div class="card-stack">
-
-    <span class="face-label">Front</span>
-    <div class="face-wrap">
-      <div class="card-face g-front">
-        <img class="logo" src="shared/img/logo-white.svg" alt="Gerardo Pressure Washing">
-        <div class="name-block">
-          <h3 class="name">Gerardo <span class="last">[Last]</span></h3>
-          <div class="rule"></div>
-          <p class="role">Owner &amp; Operator</p>
-        </div>
-        <p class="phone">(904) 555-0100</p>
-        <p class="city">Jacksonville, FL</p>
-        <div class="qr-block">
-          <div class="qr-tile"><img src="shared/qr/tel-navy.svg" alt=""></div>
-          <p class="qr-label">Call Gerardo</p>
-        </div>
-      </div>
+  <div class="site-nav-right">
+    <div class="lang-toggle" aria-label="Language toggle">
+      <button data-lang="en" class="active">EN</button>
+      <button data-lang="es">ES</button>
     </div>
+    <a href="tel:+19045550100" class="cta-call">
+      <span class="dot" aria-hidden="true"></span>
+      <span data-i="nav_cta">Call Gerardo · (904) 555-0100</span>
+    </a>
+  </div>
+</nav>
 
-    <span class="face-label">Back</span>
-    <div class="face-wrap">
-      <div class="card-face g-back">
-        <h3 class="headline">Pressure washing.<br><em>Crystal clear.</em></h3>
-        <p class="services">Driveways · Sidings · Decks · Roofs</p>
-        <div class="qr-tile"><img src="shared/qr/web-blue.svg" alt=""></div>
-        <div class="info">
-          <p class="url">gerardopressurewash.com</p>
-          <p class="email">gerardo@gerardopressurewash.com</p>
-          <hr>
-          <p class="tagline">Free estimates · Licensed &amp; insured</p>
-        </div>
-        <p class="legal">Jacksonville, FL · Northeast Florida</p>
-      </div>
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero">
+  <div class="hero-text">
+    <span class="hero-badge"><span class="pulse"></span><span data-i="hero_badge">Jacksonville · Duval · St. Johns · Clay · Nassau</span></span>
+    <h1>
+      <span data-i="hero_h1a">Pressure washing.</span>
+      <em data-i="hero_h1b">Crystal clear.</em>
+    </h1>
+    <p class="hero-sub" data-i="hero_sub">Residential and commercial cleaning across Jacksonville and Northeast Florida. Soft wash for delicate surfaces, power wash where it counts. Free estimates, licensed and insured.</p>
+    <div class="hero-ctas">
+      <a href="contact.html" class="btn"><span data-i="hero_cta1">Get a free estimate</span> →</a>
+      <a href="services.html" class="btn ghost" data-i="hero_cta2">Browse services</a>
+      <a href="https://wa.me/19045550100" target="_blank" rel="noopener" class="btn wa" data-i="hero_cta3">WhatsApp Gerardo</a>
     </div>
-
-    <div class="links">
-      <a href="card/web.html">Interactive flip ↗</a>
-      <a href="card/print.html">Print sheet ↗</a>
-      <a href="dist/gerardo-card.pdf">Print-ready PDF ↗</a>
+    <div class="hero-stats">
+      <div class="stat"><div class="n">FREE</div><div class="l" data-i="hero_stat1">Free estimates</div></div>
+      <div class="stat"><div class="n">7-DAY</div><div class="l" data-i="hero_stat2">Same-week scheduling</div></div>
+      <div class="stat"><div class="n">4</div><div class="l" data-i="hero_stat3">Counties served</div></div>
+      <div class="stat"><div class="n">✓</div><div class="l" data-i="hero_stat4">Licensed &amp; insured</div></div>
     </div>
   </div>
+  <div class="hero-media">
+    <img src="img/hero.svg" alt="Pressure washer cleaning a brick driveway" loading="eager">
+  </div>
+</section>
 
-  <footer>
-    <strong>Print-ready PDF:</strong> <code>dist/gerardo-card.pdf</code> — 2 pages (front, back), 3.75″ × 2.25″ (trim 3.5″ × 2″ + 0.125″ bleed all sides), embedded fonts, sRGB. Upload directly to Vistaprint, Moo, GotPrint, 4Over, or any local printer. See <code>dist/README.md</code> for upload steps.
-    <br><br>
-    <strong>Brand differences from SDC:</strong> accent color is sky blue (<code>#0EA5E9</code>) instead of green; logo is a custom wordmark with spray-nozzle icon instead of the SDC mark; tagline is "Pressure washing. Crystal clear." instead of "Foodservice packaging. Jacksonville built."
-    <br><br>
-    <strong>This project lives outside <code>production/</code></strong> (the SDC website folder) — at <code>JoseFinal/gerardo/</code>. Nothing here references or modifies SDC assets. Hostable independently as a static site.
-  </footer>
+<!-- ============================================================
+     MARQUEE
+     ============================================================ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span data-i="marquee_text">Driveways · Sidings · Decks · Roofs · Fences · Patios · Pavers · Concrete · Commercial · Soft wash · Power wash · Eco-safe</span>
+    <span data-i="marquee_text">Driveways · Sidings · Decks · Roofs · Fences · Patios · Pavers · Concrete · Commercial · Soft wash · Power wash · Eco-safe</span>
+  </div>
 </div>
 
+<!-- ============================================================
+     SERVICES OVERVIEW
+     ============================================================ -->
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="section-kicker" data-i="svc_kicker">Eight services · One crew</div>
+      <h2>
+        <span data-i="svc_h2a">Everything outside the house</span>
+        <em data-i="svc_em">looks like new</em>
+        <span data-i="svc_h2c">after one visit.</span>
+      </h2>
+    </div>
+    <a href="services.html" class="link" data-i="svc_link">See all services →</a>
+  </div>
+
+  <div class="cat-grid">
+    <a href="services.html#residential" class="cat" aria-label="Residential pressure wash">
+      <svg class="cat-icon"><use href="img/icons.svg#i-residential"/></svg>
+      <span data-i="svc_residential">Residential pressure wash</span>
+    </a>
+    <a href="services.html#softwash" class="cat" aria-label="Soft wash">
+      <svg class="cat-icon"><use href="img/icons.svg#i-softwash"/></svg>
+      <span data-i="svc_softwash">Soft wash</span>
+    </a>
+    <a href="services.html#driveways" class="cat" aria-label="Driveways and walkways">
+      <svg class="cat-icon"><use href="img/icons.svg#i-driveways"/></svg>
+      <span data-i="svc_driveways">Driveways &amp; walkways</span>
+    </a>
+    <a href="services.html#siding" class="cat" aria-label="House siding">
+      <svg class="cat-icon"><use href="img/icons.svg#i-siding"/></svg>
+      <span data-i="svc_siding">House siding</span>
+    </a>
+    <a href="services.html#roof" class="cat" aria-label="Roof cleaning">
+      <svg class="cat-icon"><use href="img/icons.svg#i-roof"/></svg>
+      <span data-i="svc_roof">Roof cleaning</span>
+    </a>
+    <a href="services.html#decks" class="cat" aria-label="Decks and fences">
+      <svg class="cat-icon"><use href="img/icons.svg#i-decks"/></svg>
+      <span data-i="svc_decks">Decks &amp; fences</span>
+    </a>
+    <a href="services.html#concrete" class="cat" aria-label="Concrete and pavers">
+      <svg class="cat-icon"><use href="img/icons.svg#i-concrete"/></svg>
+      <span data-i="svc_concrete">Concrete &amp; pavers</span>
+    </a>
+    <a href="services.html#commercial" class="cat" aria-label="Commercial properties">
+      <svg class="cat-icon"><use href="img/icons.svg#i-commercial"/></svg>
+      <span data-i="svc_commercial">Commercial properties</span>
+    </a>
+  </div>
+</section>
+
+<!-- ============================================================
+     COVERAGE MAP
+     ============================================================ -->
+<section class="section map-section">
+  <div class="map-text">
+    <div class="section-kicker" data-i="map_kicker">— Service area</div>
+    <h2 data-i="map_h2">Jacksonville and Northeast Florida.</h2>
+    <p data-i="map_p">Same-week scheduling across Duval, St. Johns, Clay, and Nassau counties. No travel surcharge inside the service area.</p>
+    <ul class="zones">
+      <li><span data-i="zone_duval">Duval (Jacksonville, Atlantic Beach, Mayport)</span></li>
+      <li><span data-i="zone_stjohns">St. Johns (St. Augustine, Ponte Vedra)</span></li>
+      <li><span data-i="zone_nassau">Nassau (Fernandina Beach, Yulee)</span></li>
+      <li><span data-i="zone_clay">Clay (Orange Park, Middleburg)</span></li>
+    </ul>
+  </div>
+  <div class="map-box">
+    <svg class="map-svg" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Service area map: Duval, Nassau, St. Johns, and Clay counties">
+      <defs>
+        <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+          <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#D5DCE2" stroke-width=".5"/>
+        </pattern>
+        <linearGradient id="ocean" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#C9D6E0" stop-opacity=".45"/>
+          <stop offset="1" stop-color="#A8BCCC" stop-opacity=".7"/>
+        </linearGradient>
+      </defs>
+      <rect width="400" height="300" fill="#E5EBEF"/>
+      <rect width="400" height="300" fill="url(#grid)"/>
+      <rect x="305" y="0" width="95" height="300" fill="url(#ocean)"/>
+      <text x="355" y="158" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9" fill="#5A6B7A" text-anchor="middle" letter-spacing="3">ATLANTIC</text>
+      <text x="355" y="172" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9" fill="#5A6B7A" text-anchor="middle" letter-spacing="3">OCEAN</text>
+
+      <g>
+        <!-- Nassau (north) -->
+        <path d="M 75 38 L 305 38 L 305 65 L 320 78 L 305 92 L 305 102 Q 220 116 100 100 Z"
+              fill="#0EA5E9" fill-opacity=".55" stroke="#0284C7" stroke-width="1.5"/>
+        <text x="200" y="76" font-family="Outfit, system-ui, sans-serif" font-size="15" font-weight="600" fill="#001D3D" text-anchor="middle">Nassau</text>
+
+        <!-- Duval (middle) -->
+        <path d="M 100 100 Q 220 116 305 102 L 305 128 L 322 145 L 305 162 L 305 182 Q 220 192 110 180 L 92 138 Z"
+              fill="#0EA5E9" fill-opacity=".55" stroke="#0284C7" stroke-width="1.5"/>
+        <text x="190" y="150" font-family="Outfit, system-ui, sans-serif" font-size="18" font-weight="700" fill="#001D3D" text-anchor="middle">Duval</text>
+
+        <!-- Clay (southwest) -->
+        <path d="M 25 175 L 110 180 L 175 188 L 175 258 L 95 272 L 22 240 Z"
+              fill="#0EA5E9" fill-opacity=".55" stroke="#0284C7" stroke-width="1.5"/>
+        <text x="100" y="228" font-family="Outfit, system-ui, sans-serif" font-size="15" font-weight="600" fill="#001D3D" text-anchor="middle">Clay</text>
+
+        <!-- St. Johns (southeast) -->
+        <path d="M 175 188 Q 220 192 305 182 L 305 282 Q 220 290 175 258 Z"
+              fill="#0EA5E9" fill-opacity=".55" stroke="#0284C7" stroke-width="1.5"/>
+        <text x="245" y="235" font-family="Outfit, system-ui, sans-serif" font-size="15" font-weight="600" fill="#001D3D" text-anchor="middle">St. Johns</text>
+      </g>
+
+      <!-- Jacksonville locator -->
+      <circle cx="222" cy="155" r="3" fill="#fff" stroke="#001D3D" stroke-width="1.2"/>
+      <text x="229" y="158" font-family="Outfit, system-ui, sans-serif" font-size="10" font-weight="600" fill="#001D3D">Jacksonville</text>
+    </svg>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIALS
+     ============================================================ -->
+<section class="section testimonials">
+  <div class="section-head">
+    <div>
+      <div class="section-kicker" data-i="test_kicker">— What customers say</div>
+      <h2>
+        <span data-i="test_h2a">Trusted across</span>
+        <em data-i="test_h2b">the First Coast.</em>
+      </h2>
+    </div>
+  </div>
+  <div class="test-grid">
+    <blockquote class="test-card">
+      <p data-i="test_q1">"Driveway looked twenty years younger when Gerardo finished. Showed up when he said he would, cleaned up after himself."</p>
+      <cite data-i="test_n1">Maria L. · Jacksonville Beach</cite>
+    </blockquote>
+    <blockquote class="test-card">
+      <p data-i="test_q2">"We had black mildew streaks down the whole side of the house. Soft wash, no damage to the paint, half a day's work."</p>
+      <cite data-i="test_n2">James T. · Ponte Vedra</cite>
+    </blockquote>
+    <blockquote class="test-card">
+      <p data-i="test_q3">"He does our restaurant patio every other month. Reliable, fair price, no headaches."</p>
+      <cite data-i="test_n3">Karen P. · Atlantic Beach</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA STRIP
+     ============================================================ -->
+<div class="cta-strip">
+  <div>
+    <h2 data-i="cta_h">Ready for a free estimate?</h2>
+    <p data-i="cta_p">Text a photo of what needs cleaning. Most quotes back within 2 business hours.</p>
+  </div>
+  <div class="cta-actions">
+    <a href="contact.html" class="btn accent" data-i="cta_btn1">Get a quote</a>
+    <a href="tel:+19045550100" class="btn ghost light" data-i="cta_btn2">Call (904) 555-0100</a>
+  </div>
+</div>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="foot">
+  <div class="foot-brand">
+    <img src="shared/img/logo-white.svg" alt="Gerardo Pressure Washing" class="foot-brand-img" style="height:42px;width:auto">
+    <p>Family-run pressure washing serving Jacksonville and Northeast Florida.</p>
+  </div>
+  <div>
+    <h5 data-i="foot_svc_head">Services</h5>
+    <ul>
+      <li><a href="services.html#residential" data-i="svc_residential">Residential pressure wash</a></li>
+      <li><a href="services.html#softwash"    data-i="svc_softwash">Soft wash</a></li>
+      <li><a href="services.html#driveways"   data-i="svc_driveways">Driveways &amp; walkways</a></li>
+      <li><a href="services.html#roof"        data-i="svc_roof">Roof cleaning</a></li>
+      <li><a href="services.html#commercial"  data-i="svc_commercial">Commercial properties</a></li>
+    </ul>
+  </div>
+  <div>
+    <h5 data-i="foot_co_head">Company</h5>
+    <ul>
+      <li><a href="about.html"   data-i="foot_link_about">About</a></li>
+      <li><a href="index.html#service-area" data-i="foot_link_area">Service area</a></li>
+      <li><a href="card/"        data-i="foot_link_card">Business card</a></li>
+    </ul>
+  </div>
+  <div>
+    <h5 data-i="foot_ct_head">Contact</h5>
+    <ul>
+      <li><a href="tel:+19045550100">(904) 555-0100</a></li>
+      <li><a href="https://wa.me/19045550100" target="_blank" rel="noopener">WhatsApp</a></li>
+      <li><a href="mailto:gerardo@gerardopressurewash.com">gerardo@gerardopressurewash.com</a></li>
+      <li>Mon–Sat · 7am–6pm</li>
+    </ul>
+  </div>
+</footer>
+<div class="foot-bottom">
+  <span data-i="foot_copyright">© 2026 Gerardo Pressure Washing</span>
+  <span data-i="foot_locale">Jacksonville, FL · serving Northeast Florida</span>
+</div>
+
+<script src="i18n.js" defer></script>
 </body>
 </html>
