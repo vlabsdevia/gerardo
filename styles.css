@@ -60,11 +60,9 @@ img { display: block; }
 }
 .site-brand { display: flex; align-items: center; gap: 12px; }
 .site-brand-img {
-  height: 69px;
+  height: 60px;
   width: auto;
   display: block;
-  filter: invert(1) brightness(1.05);
-  mix-blend-mode: screen;
 }
 .site-logo {
   width: 44px; height: 44px;
@@ -624,11 +622,11 @@ img { display: block; }
 }
 .foot-brand .foot-logo em { color: var(--accent); font-style: italic; }
 .foot-brand-img {
-  height: 106px;
+  height: 100px;
   width: auto;
   display: block;
   margin-bottom: 8px;
-  mix-blend-mode: multiply;
+  border-radius: 8px;
 }
 .foot h5 {
   font-family: var(--mono);
