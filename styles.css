@@ -1777,6 +1777,8 @@ img { display: block; }
 .form-success.visible { display: block; }
 
 @media (max-width: 980px) {
+  .site-brand-img { height: 80px; }
+  .foot-brand-img { height: 140px; }
   .cat-grid { grid-template-columns: repeat(2, 1fr); }
   .testimonials .test-grid { grid-template-columns: 1fr; }
   .process .process-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1787,6 +1789,8 @@ img { display: block; }
   .cta-strip { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
+  .site-brand-img { height: 60px; }
+  .foot-brand-img { height: 100px; }
   .cat-grid { grid-template-columns: 1fr; }
   .process .process-grid { grid-template-columns: 1fr; }
 }
